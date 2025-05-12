@@ -14,6 +14,8 @@ public class Customer {
     public static final int MIN_ARRIVAL_TIME = 12; // Customers arrive every 12-25 seconds
     public static final int MAX_ARRIVAL_TIME = 25;
 
+    private static final Random random = new Random(); //static Random so it doesn't have to recreate repeatedly
+
     // Member variables
     private final int numItems;
     private final int timePerItem;
@@ -38,7 +40,7 @@ public class Customer {
      * @return a random number between lowerBound and upperBound
      */
     private static int getRandom(int lowerBound, int upperBound) {
-        Random random = new Random();
+        //Random random = new Random();
         return random.nextInt(upperBound - lowerBound + 1) + lowerBound;
     }
 
